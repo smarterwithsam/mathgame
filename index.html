@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Math Game</title>
+        <script src="scripts.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="score-div">
+            <span id="correct-field">Correct:  <span id="correct">0</span></span>
+            <span id="incorrect-field">Incorrect:   <span id="incorrect">0</span></span>
+        </div>
+        <div id="math-questions"></div>
+        <div id="input-div">
+            <input type="text" id="input-field" size=2 autofocus>
+            <button id="submit-btn" onclick="nextQuestion()">Submit</button>
+        </div>
+        <button id="play-again-btn" onClick="window.location.reload();">Play Again</button>
+        <div id="response"></div>
+    </body>
+</html>
