@@ -40,11 +40,10 @@ let score = 0
 let count = 0
 
 
-let mathProblemsArrayIndex = Math.floor(Math.random() * 10)
+let mathProblemsArrayIndex = Math.floor(Math.random() * 30)
 let currentQuestion = mathProblems[mathProblemsArrayIndex].question
 let currentAnswer = mathProblems[mathProblemsArrayIndex].answer
-//let randomQuestionIndex = Math.floor(Math.random() * 10)
-//let currentQuestionIndex = 0
+
 
 
 
@@ -72,7 +71,7 @@ function nextScreen() {
         setTimeout(() => { 
         document.querySelector("#input-field").value = ""
         
-        mathProblemsArrayIndex = Math.floor(Math.random() * 10)
+        mathProblemsArrayIndex = Math.floor(Math.random() * 30)
         currentQuestion = mathProblems[mathProblemsArrayIndex].question
         currentAnswer = mathProblems[mathProblemsArrayIndex].answer
         
