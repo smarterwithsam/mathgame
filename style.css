@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+#score-div {
+    display: flex;
+    column-gap: 2rem;
+}
+
+input {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 0;
+}
+
+div {
+    margin: 25px;
+}
+
+#math-questions {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#response {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #03c04a;
+}
+
+#score-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
