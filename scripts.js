@@ -84,7 +84,6 @@ function nextScreen() {
 
 
 function endScreen() {
-        document.querySelector("#play-again-btn").hidden = false
         setTimeout(() => { 
         document.querySelector("#input-field").value = ""
         document.querySelector("#math-questions").textContent = "Score:  " + parseInt(score)
@@ -92,6 +91,7 @@ function endScreen() {
         document.querySelector("#input-div").hidden = true
         document.querySelector("#correct-field").hidden = true
         document.querySelector("#incorrect-field").hidden = true
+        document.querySelector("#play-again-btn").hidden = false
     }, 1000);
 
 }
