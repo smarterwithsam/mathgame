@@ -11,10 +11,7 @@ body {
     text-align: center;
     justify-content: center;
     margin: 60px auto;
-    background-image: url('img1.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: #01F9C6;
     color: white;
     text-shadow: 2px 2px 5px #000000;
 }
