@@ -5,6 +5,7 @@
 }
 
 
+
 body {
     text-align: center;
     justify-content: center;
@@ -27,7 +28,7 @@ div {
 }
 
 #math-questions {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 
@@ -45,6 +46,6 @@ div {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 1.15rem;
+    font-size: 2rem;
 }
 
