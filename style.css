@@ -12,10 +12,6 @@ body {
     margin: 50px 0;
 }
 
-#score-div {
-    display: flex;
-    column-gap: 2rem;
-}
 
 input {
     text-align: center;
@@ -46,6 +42,7 @@ div {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.25rem;
+    column-gap: 2rem;
 }
 
