@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+#main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 body {
     text-align: center;
     justify-content: center;
@@ -46,3 +53,4 @@ div {
     font-weight: bold;
     font-size: 1.15rem;
 }
+
