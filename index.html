@@ -1,30 +1,35 @@
-
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ellie's Math Game</title>
-        <script src="scripts.js" defer></script>
+        <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h2>Pick the number of questions</h2>
-        <div class="number-of-questions">
+        <div class="main-div">
+            <div id="score-div">
+                <span id="correct-field">Correct:  <span id="correct">0</span></span>
+                <span id="incorrect-field">Incorrect:   <span id="incorrect">0</span></span>
+            </div>
+            <div id="math-questions"></div>
+            <div id="input-div">
+                <input type="text" id="input-field" size=5 autofocus>
+                <button id="submit-btn" onclick="nextQuestion()">Submit</button>
+            </div>
+            <div id="response"></div>
+        </div>
+        
+        <dialog id="start-dialog">
+            <h2>Pick the number of questions</h2>
             <button class="options-btns" id="five-btn" onclick="fiveQuestions()">5</button>
             <button class="options-btns" id="ten-btn" onclick="tenQuestions()">10</button>
-        </div>
-        <div class="main-div">
-        <div id="score-div">
-            <span id="correct-field">Correct:  <span id="correct">0</span></span>
-            <span id="incorrect-field">Incorrect:   <span id="incorrect">0</span></span>
-        </div>
-        <div id="math-questions"></div>
-        <div id="input-div">
-            <input type="text" id="input-field" size=5 autofocus>
-            <button id="submit-btn" onclick="nextQuestion()">Submit</button>
-        </div>
-        <button id="play-again-btn" onClick="window.location.reload();">Play Again</button>
-        <div id="response"></div>
-        </div>
+        </dialog>
+        
+        <dialog id="end-dialog">
+            <h2 id="end-score"></h2>
+            <button id="play-again-btn" onClick="window.location.reload();">Play Again</button>
+        </dialog>
+        
     </body>
 </html>
