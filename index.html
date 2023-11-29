@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -8,7 +8,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="main-div">
+        <div class="number-of-questions">
+            <button class="options-btns" id="five-btn" onclick="fiveQuestions()">5</button>
+            <button class="options-btns" id="ten-btn" onclick="tenQuestions()">10</button>
+        </div>
+        <div class="main-div">
         <div id="score-div">
             <span id="correct-field">Correct:  <span id="correct">0</span></span>
             <span id="incorrect-field">Incorrect:   <span id="incorrect">0</span></span>
