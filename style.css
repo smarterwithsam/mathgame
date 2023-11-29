@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100vh;
+    height: 100dvh;
     text-align: center;
     background-image: linear-gradient(125deg, #01F9C6, violet);
     color: white;
