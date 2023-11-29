@@ -74,6 +74,7 @@ function fiveQuestions() {
     document.querySelector(".main-div").hidden = false
     document.querySelector("#five-btn").hidden = true
     document.querySelector("#ten-btn").hidden = true
+    document.querySelector("h2").hidden = true
 }
 
 function tenQuestions() {
@@ -81,6 +82,7 @@ function tenQuestions() {
     document.querySelector(".main-div").hidden = false
     document.querySelector("#five-btn").hidden = true
     document.querySelector("#ten-btn").hidden = true
+    document.querySelector("h2").hidden = true
 }
 
 
