@@ -70,3 +70,15 @@ div {
     align-items: center;
 }
 
+.number-of-questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-btns {
+    font-size: 2rem;
+    margin: 10px;
+    width: 3em;
+}
+
