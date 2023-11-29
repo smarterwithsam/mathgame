@@ -46,19 +46,25 @@ let currentQuestion = mathProblems[mathProblemsArrayIndex].question
 let currentAnswer = mathProblems[mathProblemsArrayIndex].answer
 
 
-
-
-
-
-// Initial DOM text
+// Initial DOM modal view
+let dialog = document.querySelector("#start-dialog")
+dialog.showModal()
 document.querySelector("#math-questions").textContent = currentQuestion
-document.querySelector("#play-again-btn").hidden = true
-document.querySelector(".main-div").hidden = true
+
+function fiveQuestions() {
+    numberOfQuestions = 5
+    dialog.close()
+}
+
+function tenQuestions() {
+    numberOfQuestions = 10
+    dialog.close()
+}
 
 
 
 
-// Click on enter button
+// Event listener for "Submit" button & allowing "Enter" key
 document.getElementById("input-field").addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -68,35 +74,14 @@ document.getElementById("input-field").addEventListener("keypress", function(eve
 
 
 
-// Number of questions selection
-function fiveQuestions() {
-    numberOfQuestions = 5
-    document.querySelector(".main-div").hidden = false
-    document.querySelector("#five-btn").hidden = true
-    document.querySelector("#ten-btn").hidden = true
-    document.querySelector("h2").hidden = true
-}
-
-function tenQuestions() {
-    numberOfQuestions = 10
-    document.querySelector(".main-div").hidden = false
-    document.querySelector("#five-btn").hidden = true
-    document.querySelector("#ten-btn").hidden = true
-    document.querySelector("h2").hidden = true
-}
-
-
-
 
 // Repetitive code functions included in the submit button function
 function nextScreen() {
     setTimeout(() => { 
         document.querySelector("#input-field").value = ""
-        
         mathProblemsArrayIndex = Math.floor(Math.random() * 30)
         currentQuestion = mathProblems[mathProblemsArrayIndex].question
         currentAnswer = mathProblems[mathProblemsArrayIndex].answer
-        
         document.querySelector("#math-questions").textContent = currentQuestion
         document.querySelector("#response").textContent = ""
     }, 1000);
@@ -104,17 +89,12 @@ function nextScreen() {
 
 
 function endScreen() {
+    let endDialog = document.querySelector("#end-dialog")
     setTimeout(() => { 
-        document.querySelector("#input-field").hidden = true
-        document.querySelector("#submit-btn").hidden = true
-        document.querySelector("#correct-field").hidden = true
-        document.querySelector("#incorrect-field").hidden = true
+        endDialog.showModal()
+        document.querySelector("#end-score").textContent = "Score:  " + parseInt(score)
         document.querySelector("#play-again-btn").hidden = false
-        document.querySelector("#input-field").value = ""
-        document.querySelector("#math-questions").textContent = "Score:  " + parseInt(score)
-        document.querySelector("#response").textContent = ""
     }, 1000);
-
 }
 
 
@@ -145,3 +125,7 @@ function nextQuestion() {
         }
     }
 }
+
+
+
+
