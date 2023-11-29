@@ -38,6 +38,7 @@ let correct = 0
 let incorrect = 0
 let score = 0
 let count = 0
+let numberOfQuestions = 0
 
 
 let mathProblemsArrayIndex = Math.floor(Math.random() * 30)
@@ -52,6 +53,7 @@ let currentAnswer = mathProblems[mathProblemsArrayIndex].answer
 // Initial DOM text
 document.querySelector("#math-questions").textContent = currentQuestion
 document.querySelector("#play-again-btn").hidden = true
+document.querySelector(".main-div").hidden = true
 
 
 
@@ -66,17 +68,33 @@ document.getElementById("input-field").addEventListener("keypress", function(eve
 
 
 
+// Number of questions selection
+function fiveQuestions() {
+    numberOfQuestions = 5
+    document.querySelector(".main-div").hidden = false
+    document.querySelector("#five-btn").hidden = true
+    document.querySelector("#ten-btn").hidden = true
+}
+
+function tenQuestions() {
+    numberOfQuestions = 10
+    document.querySelector(".main-div").hidden = false
+    document.querySelector("#five-btn").hidden = true
+    document.querySelector("#ten-btn").hidden = true
+}
+
+
+
+
 // Repetitive code functions included in the submit button function
 function nextScreen() {
-        setTimeout(() => { 
+    setTimeout(() => { 
         document.querySelector("#input-field").value = ""
         
         mathProblemsArrayIndex = Math.floor(Math.random() * 30)
         currentQuestion = mathProblems[mathProblemsArrayIndex].question
         currentAnswer = mathProblems[mathProblemsArrayIndex].answer
         
-        
-        // currentQuestion = mathProblems[mathProblemsArrayIndex].question // This is the advancing line
         document.querySelector("#math-questions").textContent = currentQuestion
         document.querySelector("#response").textContent = ""
     }, 1000);
@@ -84,14 +102,15 @@ function nextScreen() {
 
 
 function endScreen() {
-        setTimeout(() => { 
-        document.querySelector("#input-field").value = ""
-        document.querySelector("#math-questions").textContent = "Score:  " + parseInt(score)
-        document.querySelector("#response").textContent = ""
-        document.querySelector("#input-div").hidden = true
+    setTimeout(() => { 
+        document.querySelector("#input-field").hidden = true
+        document.querySelector("#submit-btn").hidden = true
         document.querySelector("#correct-field").hidden = true
         document.querySelector("#incorrect-field").hidden = true
         document.querySelector("#play-again-btn").hidden = false
+        document.querySelector("#input-field").value = ""
+        document.querySelector("#math-questions").textContent = "Score:  " + parseInt(score)
+        document.querySelector("#response").textContent = ""
     }, 1000);
 
 }
@@ -105,8 +124,8 @@ function nextQuestion() {
         correct++
         count++
         document.querySelector("#correct").textContent = correct
-        score = (correct / 10)*100
-        if (count < 10) {
+        score = (correct / numberOfQuestions)*100
+        if (count < numberOfQuestions) {
             nextScreen()
         } else {
             endScreen()
@@ -117,11 +136,10 @@ function nextQuestion() {
         incorrect++
         count++
         document.querySelector("#incorrect").textContent = incorrect
-        if (count < 10) {
+        if (count < numberOfQuestions) {
             nextScreen()
         } else {
             endScreen()
         }
     }
-        console.log(count)
 }
