@@ -9,7 +9,7 @@ body {
     height: 100vh;
     text-align: center;
     /*background-image: linear-gradient(125deg, #01F9C6, violet);*/
-    background-image: url("https://github.com/smarterwithsam/mathgame/blob/main/christmas-img.png?raw=true");
+    background-image: url("christmas-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
